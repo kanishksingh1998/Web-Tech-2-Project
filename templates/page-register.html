@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+
+<head>
+    <title>Registration</title>
+    <link href="/static/css/style1.css" rel="stylesheet" type="text/css">
+    <!--<link href="../css/suggest.css" rel="stylesheet">-->
+    <!-- add javascripts -->
+    <script src="/static/js/jquery-2.0.3.min.js"></script>
+    <script src="/static/js/angular.min.js"></script>
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/controllers.js"></script>
+    <script src="/static/js/suggest.js"></script>
+    
+</head>
+
+<body class="h-100">
+    <div class="login-form-bg h-100">
+        <div class="container h-100">
+            <div class="row justify-content-center h-100">
+                <div class="col-xl-6">
+                    <div class="form-input-content">
+                        <div class="card login-form mb-0">
+                            <div class="card-body pt-5">
+                                
+                                    <a class="text-center" href="/"> <h4>HOME</h4></a>
+                                    <a class="text-center"><h2>Register</h2></a>
+        
+                                <form class="mt-5 mb-5 login-input" ng-submit="saveregister()" name="registerform" method="POST">
+                                    <div class="form-group">
+                                        <input type="text" id="srn" name="SRN" class="form-control" placeholder="SRN" required="required" ng-model="login.srn">
+                                    </div>
+                                    <div id="container"></div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" placeholder="Email" required="required" ng-model="register.email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="password" placeholder="Password" required="required" ng-model="register.password">
+                                    </div>
+                                    <button class="btn login-form__btn submit w-100" type="submit" formaction="/data">Sign Up</button>
+                                </form>
+                                    <p class="mt-5 login-form__footer">Have account <a href="/page-login" class="text-primary">Sign In </a> now</p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

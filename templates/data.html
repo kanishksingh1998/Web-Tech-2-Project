@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="example">
+<head>
+    <title>Data</title>
+
+    <!-- add styles -->
+    <link href="/static/css/style1.css" rel="stylesheet" type="text/css">
+
+    <!-- add javascripts -->
+    <script src="/static/js/jquery-2.0.3.min.js"></script>
+    <script src="/static/js/angular.min.js"></script>
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/controllers.js"></script>
+
+</head>
+<body class="h-100">
+    <div class="login-form-bg h-100">
+        <div class="container h-100">
+            <div class="row justify-content-center h-100">
+                <div class="col-xl-6">
+                    <div class="form-input-content">
+                        <div class="card login-form mb-0">
+                            <div class="card-body pt-5">
+                                <a class="text-center" href="/"> <h4>HOME</h4></a>
+                                <a class="text-center"><h3>Hello {{SRN}}!</h3></a>
+                                <a class="text-center"><h4>FILL THE DETAILS</h4></a>
+        
+                                <form class="mt-5 mb-5 login-input" ng-submit="savedata()" name="dataform" action="/progress" method="POST">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="NAME" placeholder="Name" required="required" ng-model="data.name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="SUBJECT" list="subjects" placeholder="Subject" required="required" ng-model="data.subject">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" name="CBT1" min="0" max="40" placeholder="CBT1 Marks" required="required" ng-model="data.cbt1">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" name="CBT2" min="0" max="40" placeholder="CBT2 Marks" required="required" ng-model="data.cbt2">
+                                    </div>
+                                    <button type="submit" class="btn login-form__btn submit w-100">Check Progress</button>
+                                </form>
+                                <datalist id="subjects">
+                                    <option value="Compiler Design">
+                                    <option value="Web Tech 2">
+                                    <option value="Cloud Computing">
+                                    <option value="Topics in Deep Learning">
+                                    <option value="System Modelling">
+                                </datalist>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

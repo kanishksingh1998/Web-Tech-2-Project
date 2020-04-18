@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="example">
+<head>
+    <title>Progress</title>
+
+    <!-- add styles -->
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css" >
+
+    <!-- add javascripts -->
+    <script src="/static/js/jquery-2.0.3.min.js"></script>
+    <script src="/static/js/angular.min.js"></script>
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/controllers.js"></script>
+
+</head>
+<body style="background-color:black;">
+   <div>
+      <a href="/"><h3>HOME</h3></a>
+   </div>
+   <p>{{SRN}}</p>
+	<table border = 1>
+         {% for key, value in result.items() %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+      
+</body>
+</html>

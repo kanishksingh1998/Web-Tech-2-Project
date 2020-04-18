@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="example">
+<head>
+    <title>ACADEMICS</title>
+
+    <!-- add styles -->
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- add javascripts -->
+    <script src="/static/js/jquery-2.0.3.min.js"></script>
+    <script src="/static/js/angular.min.js"></script>
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/controllers.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <!-- logo -->
+            <a href=""><img class="logo" src="/static/images/pes1.jpg" /></a>
+
+            <!-- navigation menu -->
+            <nav>
+                <ul>
+                    <li><a id="signinBtn" href="/page-login" ng-class="{activeSmall:part == 'projects'}" >Sign-In</a></li>
+                    <li><a id="registerBtn" href="/page-register" ng-class="{activeSmall:part == 'privacy'}">Register</a></li>
+                    <li><a id="aboutBtn" href="/about" ng-class="{activeSmall:part == 'about'}">About</a></li>
+                    <li style="margin-right:0px"><a id="contactBtn" class="active" href="javascript: void(0)" ng-click="showForm()">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- contact us form -->
+    <div class="paddRow contactRow">
+        <div class="wrap">
+            <div class="head">Contact Us</div>
+            <img class="close" src="/static/images/close.png" ng-click="closeForm()" />
+            <form ng-submit="save()" class="contactForm" name="form" ng-hide="loaded">
+                <input class="input" required="required" type="text" name="name" placeholder="your name" ng-model="message.name" />
+                <input class="input email" required="required" type="email" name="email" value="" placeholder="your email" ng-model="message.email" /><br />
+                <textarea class="textarea" rows="5" required="required" placeholder="your message" ng-model="message.text" ></textarea>
+                <button class="btn green">send message</button>
+            </form>
+
+            <!-- contact us form response messages -->
+            <div ng-show="process" style="text-align:center">
+                <img class="loader" src="/static/images/loader.png" />
+            </div>
+            <div ng-show="success"><p>Your message has been sent, thank you.</p></div>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div style="width:100%">
+        <div class="paddRow aboutRow">
+            <div class="wrap">
+                <p><h1>PES University, located in Bangalore, India is one of leading teaching and research universities. </h1> </p>
+                <p><br>The University is committed to providing “education for the real world” that inspires students to realize their potential. Our students graduate with the ability to adapt to an intellectually and technologically changing environment. Over the years, we have accomplished this with the participative efforts of the management, staff, students and parents.   </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
