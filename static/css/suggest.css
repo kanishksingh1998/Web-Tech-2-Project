@@ -1,0 +1,19 @@
+div#container
+{
+	width: 200px;
+	border: 2px solid red;
+	display: none;
+}
+
+div.suggest
+{
+	color: red;
+	background-color: yellow;
+}
+
+div.suggest:hover
+{
+	color: yellow;
+	background-color: red;
+	cursor: pointer;
+}
